@@ -1,5 +1,6 @@
 {
   "name": "my-skills",
+  "homepage": "https://<username>.github.io/my-skills/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
      "deploy": "gh-pages -d dist"
   },
   "dependencies": {
