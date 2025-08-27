@@ -8,7 +8,7 @@ import styles from "./NotesApp.module.css";
 
 const NotesApp = () => {
   return (
-    <Provider store={store}>
+   
       <div className={styles.container}>
         <Header />
         <Main>
@@ -19,7 +19,7 @@ const NotesApp = () => {
         </Main>
         <Footer />
       </div>
-    </Provider>
+    
   );
 };
 
