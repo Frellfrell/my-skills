@@ -1,6 +1,6 @@
 {
   "name": "my-skills",
-  "homepage": "https://<username>.github.io/my-skills/",
+  "homepage": "https://frellfrell.github.io/my-skills/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
