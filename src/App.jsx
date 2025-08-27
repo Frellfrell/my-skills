@@ -2,6 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import NotesApp from "./apps/MyNotesApp/NotesApp";
 import UserManagerApp from "./apps/UserManagerApp/UserManagerApp";
+import { Provider } from "react-redux";
+import userStore from "./apps/UserManagerApp/redux/store";
+import notesStore from "./apps/MyNotesApp/redux/store";
+
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");
@@ -9,9 +13,17 @@ const [activeApp, setActiveApp] = useState("notes");
 const renderApp = () => {
     switch (activeApp) {
       case "notes":
-        return <NotesApp />;
+        return (
+         <Provider store={notesStore}>
+          <NotesApp />
+         </Provider>
+        );
       case "manager":
-        return <UserManagerApp />;  
+        return (
+          <Provider store={userStore}>
+            <UserManagerApp />
+          </Provider>
+        );
       default:
         return <p>Select an app to view</p>;
     }
