@@ -43,7 +43,7 @@ const UserListApp = () => {
 
       <input
         type="text"
-        placeholder="Фильтр по имени..."
+        placeholder="Filter by name..."
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
         className={styles.input}
