@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import NotesApp from "./apps/MyNotesApp/NotesApp";
 import UserManagerApp from "./apps/UserManagerApp/UserManagerApp";
+import UserListApp from "./apps/UserListApp/UserListApp";
 import { Provider } from "react-redux";
 import userStore from "./apps/UserManagerApp/redux/store";
 import notesStore from "./apps/MyNotesApp/redux/store";
@@ -24,6 +25,8 @@ const renderApp = () => {
             <UserManagerApp />
           </Provider>
         );
+         case "userlist":                
+        return <UserListApp />;
       default:
         return <p>Select an app to view</p>;
     }
@@ -42,6 +45,7 @@ const renderApp = () => {
         <option value="">---</option>
         <option value="notes">📝 Notes App</option>
         <option value="manager">👤 User Manager</option>
+        <option value="userlist">📋 User List</option>
       </select>
 
       {renderApp()}
