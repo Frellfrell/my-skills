@@ -21,7 +21,7 @@ function MessageList({ messages, onDeleteMessage }) {
   return (
     <Paper className={styles.list}>
       <Typography variant="h6" gutterBottom>
-        Sent Messages
+        Send Messages
       </Typography>
       <List>
         {messages.map((m) => (

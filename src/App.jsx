@@ -6,7 +6,7 @@ import UserListApp from "./apps/UserListApp/UserListApp";
 import { Provider } from "react-redux";
 import userStore from "./apps/UserManagerApp/redux/store";
 import notesStore from "./apps/MyNotesApp/redux/store";
-
+import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");
@@ -27,6 +27,8 @@ const renderApp = () => {
         );
          case "userlist":                
         return <UserListApp />;
+        case "mui":
+        return <MuiDemoApp />;
       default:
         return <p>Select an app to view</p>;
     }
@@ -46,6 +48,7 @@ const renderApp = () => {
         <option value="notes">📝 Notes App</option>
         <option value="manager">👤 User Manager</option>
         <option value="userlist">📋 User List</option>
+        <option value="mui">🎨 Material UI Demo</option>
       </select>
 
       {renderApp()}

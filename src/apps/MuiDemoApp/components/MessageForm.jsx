@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Paper, Typography, Box, TextField, Button } from "@mui/material";
+import { Paper, Typography, Box, TextField, Button, InputAdornment } from "@mui/material";
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 
-import SendIcon from "@mui/icons-material/Send";
-import PersonIcon from "@mui/icons-material/Person";
-import MailIcon from "@mui/icons-material/Mail";
-
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import MessageIcon from '@mui/icons-material/Message';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import SendIcon from '@mui/icons-material/Send';
 import styles from "./MessageForm.module.css";
 
 
@@ -31,36 +32,71 @@ function MessageForm({ onSendMessage }) {
 
   return (
     <Paper className={styles.form}>
-      <Typography variant="h6" gutterBottom>Send a Message</Typography>
-      <Box onSubmit={handleSubmit}>
+      <Typography variant="h6" gutterBottom>
+        <ForwardToInboxIcon className={styles.icon} />
+        Send a Message
+      </Typography>
+      <Box 
+      component="form"
+      onSubmit={handleSubmit}
+       display="flex"
+        flexDirection="column"
+        gap={2}
+      >
         <TextField
           label="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          IconInput
-          ={{ startAdornment: <PersonIcon className={styles.icon} /> }}
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <PersonAddAltIcon className={styles.icon} />
+              </InputAdornment>
+            ),
+          }}
+          fullWidth
         />
+
         <TextField
           label="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          IconInput={{ startAdornment: <MailIcon className={styles.icon} /> }}
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <ContactMailIcon className={styles.icon} />
+              </InputAdornment>
+            ),
+          }}
+          fullWidth
         />
-        
+
         <TextField
           label="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          IconInput={{ startAdornment: <MessageIcon className={styles.icon} /> }}
+          variant="outlined"
+          multiline
           rows={4}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <MessageIcon className={styles.icon} />
+              </InputAdornment>
+            ),
+          }}
+          fullWidth
         />
+
         {error && <Typography color="error">{error}</Typography>}
+
         <Button
           type="submit"
           variant="contained"
           color="primary"
-           startIcon={<SendIcon />}
-          onClick={handleSend}
+          startIcon={<SendIcon />}
         >
           Send
         </Button>

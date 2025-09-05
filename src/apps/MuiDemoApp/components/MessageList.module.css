@@ -1,8 +1,18 @@
 .list {
   padding: 16px;
-  background-color: #ffffff;
+  background-color: #fdfafa;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+.list:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .item {
   border-bottom: 1px solid #eee;
+    transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-2px);
 }

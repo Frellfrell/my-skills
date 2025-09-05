@@ -2,7 +2,12 @@
 .form {
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
   background-color: #ffffff;
+}
+.form:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .fields {
@@ -12,6 +17,21 @@
 }
 
 .icon {
-  margin-right: 6px;
+   margin-right: 8px;
+  transition: transform 0.2s ease;
   color: #1976d2;
+}
+.icon:hover {
+  transform: scale(1.2);
+  color: #1565c0;
+}
+
+
+.button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
 }
