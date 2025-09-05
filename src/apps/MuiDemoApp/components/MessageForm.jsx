@@ -37,20 +37,21 @@ function MessageForm({ onSendMessage }) {
           label="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          InputProps={{ startAdornment: <PersonIcon className={styles.icon} /> }}
+          IconInput
+          ={{ startAdornment: <PersonIcon className={styles.icon} /> }}
         />
         <TextField
           label="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          InputProps={{ startAdornment: <MailIcon className={styles.icon} /> }}
+          IconInput={{ startAdornment: <MailIcon className={styles.icon} /> }}
         />
         
         <TextField
           label="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          InputProps={{ startAdornment: <MessageIcon className={styles.icon} /> }}
+          IconInput={{ startAdornment: <MessageIcon className={styles.icon} /> }}
           rows={4}
         />
         {error && <Typography color="error">{error}</Typography>}

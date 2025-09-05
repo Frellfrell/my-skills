@@ -1,1 +1,8 @@
+.list {
+  padding: 16px;
+  background-color: #ffffff;
+}
 
+.item {
+  border-bottom: 1px solid #eee;
+}

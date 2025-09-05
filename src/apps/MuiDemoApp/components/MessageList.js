@@ -5,7 +5,6 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  ListItemSecondaryAction,
   IconButton
 } from "@mui/material";
 
@@ -34,7 +33,7 @@ function MessageList({ messages, onDeleteMessage }) {
               primary={`${m.name} (${m.email})`}
               secondary={m.message}
             />
-            <ListItemSecondaryAction>
+            
               <IconButton
                 edge="end"
                 color="error"
@@ -42,7 +41,7 @@ function MessageList({ messages, onDeleteMessage }) {
               >
                 <DeleteIcon />
               </IconButton>
-            </ListItemSecondaryAction>
+          
           </ListItem>
         ))}
       </List>
