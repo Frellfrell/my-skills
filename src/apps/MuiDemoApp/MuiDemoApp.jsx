@@ -36,9 +36,9 @@ function MuiDemoApp() {
   };
 
  return (
-    <Box className={styles.wrapper}>
+    <Box mt={4} className={styles.wrapper}>
       {/* Верхняя панель */}
-      <AppBar position="static">
+      <AppBar position="static" >
         <Toolbar>
           <InfoIcon className={styles.icon} />
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
@@ -56,7 +56,7 @@ function MuiDemoApp() {
 
       {/* Основное содержимое */}
       <Container sx={{ mt: 4 }}>
-        <Typography variant="h5" gutterBottom>Welcome to the Material UI Demo</Typography>
+        <Typography variant="h5" gutterBottom className={styles.icon}>Welcome to the Material UI Demo</Typography>
         {/* Форма */}
         <MessageForm onSendMessage={handleSendMessage} />
         {/* Список сообщений */}

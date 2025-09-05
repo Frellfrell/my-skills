@@ -20,7 +20,7 @@ function MessageList({ messages, onDeleteMessage }) {
 
   return (
     <Paper className={styles.list}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom className={styles.title}>
         Send Messages
       </Typography>
       <List>
