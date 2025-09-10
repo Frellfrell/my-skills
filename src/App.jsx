@@ -8,6 +8,7 @@ import userStore from "./apps/UserManagerApp/redux/store";
 import notesStore from "./apps/MyNotesApp/redux/store";
 import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
+import ContactsApp from "./apps/ContactsApp/ContactsApp";
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");
@@ -32,6 +33,8 @@ const renderApp = () => {
         return <MuiDemoApp />;
         case "theme-toggle":
         return <ThemeToggleApp />;
+         case "contacts":
+        return <ContactsApp />;
       default:
         return <p>Select an app to view</p>;
     }
@@ -53,6 +56,7 @@ const renderApp = () => {
         <option value="userlist">📋 User List</option>
         <option value="mui">🎨 Material UI Demo</option>
         <option value="theme-toggle">🌓 Theme Toggle App</option>
+        <option value="contacts">📇 Contacts App</option>
       </select>
 
       {renderApp()}
