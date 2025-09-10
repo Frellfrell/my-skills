@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ThemeProvider, CssBaseline, Typography, Container, Paper, IconButton, Box } from '@mui/material';
 import { lightTheme, darkTheme } from './theme';
 import StyledButton from './StyledButton';
+import { Brightness4, Brightness7 } from "@mui/icons-material";
 
 
 function ThemeToggleApp() {
@@ -17,13 +18,17 @@ function ThemeToggleApp() {
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
         <CssBaseline />
         <Paper
-          elevation={8}
+          elevation={12}
           sx={{
             p: 4,
             borderRadius: 4,
             maxWidth: 500,
             mx: "auto",
-            transition: "background-color 0.4s, color 0.4s",
+            color: "white",
+            background: isDark
+              ? "linear-gradient(135deg, #1e3c72, #2a5298)" // тёмная тема: глубокий синий градиент
+              : "linear-gradient(135deg, #ff9a9e, #fad0c4)", // светлая тема: розово-персиковый градиент
+            transition: "all 0.5s ease",
           }}
         >
           
@@ -33,10 +38,11 @@ function ThemeToggleApp() {
               onClick={toggleTheme}
               color="inherit"
               sx={{
-                bgcolor: isDark ? "grey.800" : "grey.200",
+                 bgcolor: "rgba(255,255,255,0.2)",
                 "&:hover": {
-                  bgcolor: isDark ? "grey.700" : "grey.300",
+                  bgcolor: "rgba(255,255,255,0.3)",
                 },
+                color: "white",
                 transition: "all 0.3s ease",
               }}
             >
@@ -45,7 +51,7 @@ function ThemeToggleApp() {
           </Box>
           
          {/* Заголовок */}
-          <Typography variant="h4" gutterBottom sx={{ mt: 2 }}>
+          <Typography variant="h4" gutterBottom sx={{ mt: 2, fontWeight: 700 }}>
             {isDark ? "Dark Theme 🌙" : "Light Theme ☀️"}
           </Typography>
            <Typography variant="body1" sx={{ mt: 1 }}>
