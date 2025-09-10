@@ -14,9 +14,10 @@ function ThemeToggleApp() {
 
   return (
     <Container sx={{ textAlign: "center", marginTop: "50px" }}>
+        <CssBaseline />
       {/* Только этот блок получает тему */}
       <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-        <CssBaseline />
+        
         <Paper
           elevation={12}
           sx={{
