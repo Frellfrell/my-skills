@@ -1,0 +1,59 @@
+.contactsSection {
+   position: relative; /* чтобы соцсети можно было позиционировать */
+  display: flex;
+ 
+  align-items: center; /* центрируем контактный блок */
+  padding: 2rem;
+  background-color: #ead3d3;
+}
+
+.socialLinks {
+   position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.socialLinks span {
+  font-size: 0.9rem;
+  color: #5c5b5b;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h1 {
+  margin-bottom: 1rem;
+}
+
+.contactInfo ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.contactInfo li {
+  margin-bottom: 0.5rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.contactForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
