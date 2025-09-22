@@ -9,7 +9,7 @@ import notesStore from "./apps/MyNotesApp/redux/store";
 import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
 import ContactsApp from "./apps/ContactsApp/ContactsApp";
-import SnickerStoryApp from "./apps/SnickerStoryApp/App";
+import SnickerStoryApp from "./apps/SnickerStoryApp/SnickerStoryApp.jsx";
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");

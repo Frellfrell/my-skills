@@ -14,6 +14,7 @@ const SnickerStoryApp = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer />
       </Router>
