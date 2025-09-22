@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
 import Cart from "./components/Cart/Cart";
+import Contacts from "./components/Contacts/Contacts";
 import { CartProvider } from "./context/CartContext";
 
 const SnickerStoryApp = () => {
