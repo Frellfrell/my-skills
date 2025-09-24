@@ -1,10 +1,10 @@
 .header {
   height: 110px;                  
-  background-color: #222;          /* Фон */
+  background-color: #3B3C3D;          /* Фон */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 250px;               /* Отступы слева и справа */
+  padding: 0 160px;               /* Отступы слева и справа */
   position: relative;
   color: white;
 }
@@ -16,8 +16,8 @@
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  top: 43px;
-  left: 250px;
+  
+  left: 160px;
 }
 
 .nav {
@@ -25,7 +25,7 @@
   gap: 30px;
   position: absolute;
   top: 46px;
-  right: 250px;
+  right: 160px;
 }
 
 .navLink {

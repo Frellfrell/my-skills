@@ -1,7 +1,101 @@
 
 .footer {
-  background: #111;
-  color: #aaa;
-  padding: 20px;
-  text-align: center;
+  background: #232425;
+  height: 347px;
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 250px;
+  position: relative;
 }
+
+/* Левая часть */
+.left {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 160px; 
+  top: 66px;  
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 19px;
+  opacity: 0.8;
+ 
+}
+
+.phone {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  margin-bottom: 13px;
+}
+.email {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+   margin-top: 0.5px;
+}
+.rights {
+   margin-top: 48px; 
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+}
+/* Правая часть */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 160px; 
+  top: 66px; 
+   bottom: 25px; 
+}
+
+.socials {
+  display: flex;
+  gap: 26px;
+  position: absolute;
+  margin-bottom: 43px;
+  
+}
+
+.icon {
+    
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #fff;
+}
+
+/* Email блок */
+.emailBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: auto;
+  gap: 2px;
+}
+
+.emailLabel {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.emailLine {
+  width: 407px;
+  height: 1px;
+  /*position: absolute;
+  right: 250px;
+  bottom: 48px;'*/
+  background-color:rgba(255, 255, 255, 0.5);
+ 
+}
+

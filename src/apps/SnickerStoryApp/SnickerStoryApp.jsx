@@ -7,9 +7,13 @@ import Cart from "./components/Cart/Cart";
 import Contacts from "./components/Contacts/Contacts";
 import { CartProvider } from "./context/CartContext";
 
+import styles from "./SneakerStoryApp.module.css";
+
+
 const SnickerStoryApp = () => {
   return (
     <CartProvider>
+         <div className={styles.container}> 
       <Router>
         <Header />
         <Routes>
@@ -19,6 +23,7 @@ const SnickerStoryApp = () => {
         </Routes>
         <Footer />
       </Router>
+      </div>
     </CartProvider>
   );
 };
