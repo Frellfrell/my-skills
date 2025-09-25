@@ -10,4 +10,4 @@ const interactiveUserListStore = configureStore({
 });
     
 
-export default InteractiveUserListStore;
+export default interactiveUserListStore;
