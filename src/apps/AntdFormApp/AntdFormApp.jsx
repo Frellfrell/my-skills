@@ -5,8 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const { Title, Paragraph } = Typography;
 
-export default function App() {
+export default function AntdFormApp() {
+const [form] = Form.useForm();
 
+const [submittedData, setSubmittedData] = useState([]);
 
 // Обработка отправки формы
 const onFinish = (values) => {
