@@ -10,6 +10,7 @@ import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
 import ContactsApp from "./apps/ContactsApp/ContactsApp";
 import SnickerStoryApp from "./apps/SnickerStoryApp/SnickerStoryApp.jsx";
+import AntdFormApp from "./apps/AntdFormApp/AntdFormApp";
 import InteractiveUserListApp from "./apps/InteractiveUserListApp/InteractiveUserListApp.jsx";
 
 function App() {
@@ -39,6 +40,8 @@ const renderApp = () => {
         return <ContactsApp />;
         case "snickerstory":                
         return <SnickerStoryApp />;
+        case "antdform":
+        return <AntdFormApp />;
         case "interactive-userlist":
         return <InteractiveUserListApp />;
       default:
@@ -64,6 +67,7 @@ const renderApp = () => {
         <option value="theme-toggle">🌓 Theme Toggle App</option>
         <option value="contacts">📇 Contacts App</option>
         <option value="snickerstory">👟 Snicker Story</option>
+        <option value="antdform">💠 Ant Design Form App</option>
         <option value="interactive-userlist">⚡ Interactive User List</option>
       </select>
 
