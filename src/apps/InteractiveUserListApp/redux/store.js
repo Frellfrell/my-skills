@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import usersReducer from './usersSlice';
+import usersReducer from './userSlice';
 
 
 
@@ -10,4 +10,4 @@ const interactiveUserListStore = configureStore({
 });
     
 
-export default interactiveUserListStore;
+export default InteractiveUserListStore;

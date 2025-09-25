@@ -10,6 +10,7 @@ import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
 import ContactsApp from "./apps/ContactsApp/ContactsApp";
 import SnickerStoryApp from "./apps/SnickerStoryApp/SnickerStoryApp.jsx";
+import InteractiveUserListApp from "./apps/InteractiveUserListApp/InteractiveUserListApp.jsx";
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");
@@ -37,7 +38,9 @@ const renderApp = () => {
          case "contacts":
         return <ContactsApp />;
         case "snickerstory":                
-      return <SnickerStoryApp />;
+        return <SnickerStoryApp />;
+        case "interactive-userlist":
+        return <InteractiveUserListApp />;
       default:
         return <p>Select an app to view</p>;
     }
@@ -61,6 +64,7 @@ const renderApp = () => {
         <option value="theme-toggle">🌓 Theme Toggle App</option>
         <option value="contacts">📇 Contacts App</option>
         <option value="snickerstory">👟 Snicker Story</option>
+        <option value="interactive-userlist">⚡ Interactive User List</option>
       </select>
 
       {renderApp()}
