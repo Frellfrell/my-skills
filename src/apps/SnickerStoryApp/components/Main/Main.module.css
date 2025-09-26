@@ -8,8 +8,8 @@
 }
 
 .banner {
-  width: 1420px;
-  height: 530px;
+ 
+  height: 330px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -17,11 +17,11 @@
 
 /* Заголовок "Товары" */
 .productsTitle {
-  margin-left: 160px;
-  margin-top: 740px; /* от верха хедера */
+  margin: 40px 0 0 160px;
   font-size: 36px;
   font-weight: bold;
   color: #000;
+  text-align: left;
 }
 
 /* Линия под заголовком */
@@ -36,10 +36,12 @@
 .products {
   display: flex;
   justify-content: space-between;
-  margin: 45px 160px 0 160px; /* top = 866px - 821px = 45px */
+  margin: 45px 160px 160px 160px; /* top = 866px - 821px = 45px */
+  gap: 14px; /* Расстояние между карточками */
+  flex-wrap: wrap; /* Перенос карточек на следующую строку */
 }
 
-.products > * {
+/*.products > * {
   width: 386px;
   height: 393px;
-}
+}*/
