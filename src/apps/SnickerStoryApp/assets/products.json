@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "image": "Snicker1.png",
+    "name": "Мужские Кроссовки Nike Air Zoom Pegasus",
+    "price": "180 €",
+    "buttonImage": "+.png"
+  },
+   {
+    "id": "2",
+    "image": "Snicker1.png",
+    "name": "Мужские Кроссовки Nike Air Zoom Pegasus",
+    "price": "180 €",
+    "buttonImage": "+.png"
+  },
+   {
+    "id": "3",
+    "image": "Snicker2.png",
+    "name": "Мужские Кроссовки Adidas Originals",
+    "price": "150 €",
+    "buttonImage": "+1.png"
+  }
+  ]
