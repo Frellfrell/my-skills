@@ -1,9 +1,45 @@
 .main {
-  padding: 20px;
+  padding: 0; 
 }
 
+/* Баннер */
+.bannerContainer {
+  margin: 28px 160px 0 160px; 
+}
+
+.banner {
+  width: 1420px;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Заголовок "Товары" */
+.productsTitle {
+  margin-left: 160px;
+  margin-top: 740px; /* от верха хедера */
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Линия под заголовком */
+.titleLine {
+  width: calc(100% - 320px); /* 160px слева + 160px справа */
+  height: 1px;
+  background-color: #eaeaea;
+  margin: 20px auto 0 auto; 
+}
+
+/* Карточки */
 .products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 160px 0 160px; /* top = 866px - 821px = 45px */
+}
+
+.products > * {
+  width: 386px;
+  height: 393px;
 }

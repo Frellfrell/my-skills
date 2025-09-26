@@ -14,7 +14,7 @@ const SnickerStoryApp = () => {
   return (
     <CartProvider>
          <div className={styles.container}> 
-      <Router>
+      <Router basename="/my-skills">
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
