@@ -10,7 +10,7 @@ import { CartProvider } from "./context/CartContext";
 import styles from "./SneakerStoryApp.module.css";
 
 
-const SnickerStoryApp = () => {
+const SneakerStoryApp = () => {
   return (
     <CartProvider>
          <div className={styles.container}> 

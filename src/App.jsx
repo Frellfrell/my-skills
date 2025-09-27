@@ -9,7 +9,7 @@ import notesStore from "./apps/MyNotesApp/redux/store";
 import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
 import ContactsApp from "./apps/ContactsApp/ContactsApp";
-import SnickerStoryApp from "./apps/SnickerStoryApp/SnickerStoryApp.jsx";
+import SneakerStoryApp from "./apps/SneakerStoryApp/SneakerStoryApp.jsx";
 import AntdFormApp from "./apps/AntdFormApp/AntdFormApp";
 import InteractiveUserListApp from "./apps/InteractiveUserListApp/InteractiveUserListApp.jsx";
 
@@ -38,8 +38,8 @@ const renderApp = () => {
         return <ThemeToggleApp />;
          case "contacts":
         return <ContactsApp />;
-        case "snickerstory":                
-        return <SnickerStoryApp />;
+        case "sneakerstory":
+        return <SneakerStoryApp />;
         case "antdform":
         return <AntdFormApp />;
         case "interactive-userlist":
