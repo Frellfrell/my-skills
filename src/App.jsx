@@ -9,9 +9,9 @@ import notesStore from "./apps/MyNotesApp/redux/store";
 import MuiDemoApp from "./apps/MuiDemoApp/MuiDemoApp";
 import ThemeToggleApp from "./apps/theme-toggle-app/ThemeToggleApp";
 import ContactsApp from "./apps/ContactsApp/ContactsApp";
-import SneakerStoryApp from "./apps/SneakerStoryApp/SneakerStoryApp.jsx";
+import SneakerStoryApp from "./apps/SneakerStoryApp/SneakerStoryApp";
 import AntdFormApp from "./apps/AntdFormApp/AntdFormApp";
-import InteractiveUserListApp from "./apps/InteractiveUserListApp/InteractiveUserListApp.jsx";
+import InteractiveUserListApp from "./apps/InteractiveUserListApp/InteractiveUserListApp";
 
 function App() {
 const [activeApp, setActiveApp] = useState("notes");
