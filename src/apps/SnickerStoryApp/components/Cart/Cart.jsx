@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./Cart.module.css";
 import cartItems from "../../cart.json"; 
 import basketIcon from "../../assets/basket.png"; // PNG для кнопки удаления
@@ -13,7 +12,7 @@ const Cart = () => {
 
       <div className={styles.cartContent}>
         {/* Левая боковая информация */}
-        <div className={styles.summaryBox}> 
+        <div className={styles.summaryBox}>
           <ul>
             {cartItems.map((item) => (
               <li key={item.id}>
@@ -30,6 +29,7 @@ const Cart = () => {
             €
           </div>
         </div>
+
         {/* Карточки корзины */}
         <div className={styles.cartCards}>
           {cartItems.map((item) => (

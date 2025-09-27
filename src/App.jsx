@@ -66,7 +66,7 @@ const renderApp = () => {
         <option value="mui">🎨 Material UI Demo</option>
         <option value="theme-toggle">🌓 Theme Toggle App</option>
         <option value="contacts">📇 Contacts App</option>
-        <option value="snickerstory">👟 Snicker Story</option>
+        <option value="sneakerstory">👟 Sneaker Story</option>
         <option value="antdform">💠 Ant Design Form App</option>
         <option value="interactive-userlist">⚡ Interactive User List</option>
       </select>
