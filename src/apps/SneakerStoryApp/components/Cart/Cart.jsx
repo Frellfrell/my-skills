@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Cart.module.css";
-import cartItems from "../../cart.json"; 
+import cartItems from "../../assets/cart.json"; 
 import basketIcon from "../../assets/basket.png"; // PNG для кнопки удаления
 
 const Cart = () => {
