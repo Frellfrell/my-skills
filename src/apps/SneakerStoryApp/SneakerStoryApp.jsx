@@ -28,4 +28,4 @@ const SneakerStoryApp = () => {
   );
 };
 
-export default SnickerStoryApp;
+export default SneakerStoryApp;

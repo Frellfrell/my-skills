@@ -1,8 +1,113 @@
-.cart {
+.cartMain {
+  padding: 0 160px;
+}
+
+.cartTitle {
+  margin-top: 160px; /* от начала макета */
+  font-size: 44px;
+  font-weight: bold;
+  color: #000;
+}
+
+.titleLine {
+  width: calc(100% - 320px); /* отступы слева и справа */
+  height: 1px;
+  background-color: #eaeaea;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.cartContent {
+  display: flex;
+  gap: 30px;
+}
+
+/* Левая боковая панель */
+.summaryBox {
+  width: 388px;
+  background-color: #fafafa;
   padding: 20px;
+}
+
+.summaryBox h3 {
+  margin-bottom: 20px;
+}
+
+.summaryBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summaryBox li {
+  margin-bottom: 10px;
 }
 
 .total {
   margin-top: 20px;
   font-weight: bold;
+}
+
+/* Карточки корзины */
+.cartCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  width: 903px;
+  height: 134px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+}
+
+.cartImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cartInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cartName {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cartPrice {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.deleteButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #007bff;
+}
+
+.deleteButton img {
+  width: 20px;
+  height: 20px;
 }
