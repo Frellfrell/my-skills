@@ -41,7 +41,4 @@
   flex-wrap: wrap; /* Перенос карточек на следующую строку */
 }
 
-/*.products > * {
-  width: 386px;
-  height: 393px;
-}*/
+

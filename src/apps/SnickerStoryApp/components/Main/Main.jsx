@@ -19,8 +19,6 @@ const Main = () => {
       {/* Карточки */}
       <div className={styles.products}>
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </div>
     </main>
   );
