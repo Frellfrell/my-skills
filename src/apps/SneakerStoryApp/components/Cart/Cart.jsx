@@ -1,9 +1,16 @@
 import React from "react";
 import styles from "./Cart.module.css";
-import cartItems from "../../assets/cart.json"; 
+import { useCart } from "../../context/CartContext";
+ 
 import basketIcon from "../../assets/basket.png"; // PNG для кнопки удаления
 
 const Cart = () => {
+  const { cartItems, removeFromCart } = useCart();
+  
+const total = cartItems.reduce(
+    (sum, item) => sum + parseInt(item.price, 10),
+    0
+  );
   return (
     <main className={styles.cartMain}>
       {/* Заголовок */}

@@ -1,21 +1,21 @@
-.productContainer {
+/*.productContainer {
   display: flex;
   gap: 131px;
   margin-left: 160px;
   margin-right: 160px;
-}
+}*/
 
 
 /* Контейнер карточки */
 .card {
   background-color: rgba(0, 0, 0, 0.15); /* Прозрачный черный фон */
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
-  width: 386px; /* Фиксированная ширина карточки */
-  height: 393px; /* Фиксированная высота */
+  /*width: 386px; /* Фиксированная ширина карточки */
+  /*height: 393px; /* Фиксированная высота */
   box-sizing: border-box;
 }
 
@@ -30,27 +30,34 @@
 
 /* Название товара */
 .cardTitle {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   color: #000;
   text-align: center;
-  margin-bottom: 12px 0;
+  
 }
-.cardPriceBox {
+.cardBottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; 
+}
+
+.cardPriceBox {
+  display: flex;
+  flex-direction: column;
+ gap: 4px;
+ 
 }
 
 .priceLabel {
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
 }
 /* Цена товара */
 .cardPrice {
-  font-size: 16px;
+  font-size: 24px;
   color: #333;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 16px;
 }
 

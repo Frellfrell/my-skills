@@ -1,5 +1,8 @@
 .main {
-  padding: 0; 
+  padding: 0 ;
+   flex: 1; /* растягиваем между хедером и футером */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Баннер */
@@ -8,7 +11,7 @@
 }
 
 .banner {
- 
+  width: 100%;
   height: 330px;
   object-fit: cover;
   border-radius: 12px;
@@ -35,9 +38,11 @@
 /* Карточки */
 .products {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+ 
+  justify-content:flex-start;
   margin: 45px 160px 160px 160px; /* top = 866px - 821px = 45px */
-  gap: 14px; /* Расстояние между карточками */
+  gap: 32px; /* Расстояние между карточками */
  
 }
 

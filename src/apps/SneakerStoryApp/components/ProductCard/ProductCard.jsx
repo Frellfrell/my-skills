@@ -5,6 +5,8 @@ import snicker1 from "../../assets/snicker1.png";
 import snicker2 from "../../assets/snicker2.png";
 import Plus from "../../assets/+.png";
 import Plus1 from "../../assets/+1.png";
+import { useCart } from "../../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const imageMap = {
   "snicker1.png": snicker1,
@@ -14,7 +16,8 @@ const imageMap = {
 };
 const ProductCard = () => {
   return (
-    <div className={styles.productContainer}>
+    <>
+      {/* <div className={styles.productContainer}> */}
       {products.map((product) => (
         <div key={product.id} className={styles.card}>
           <img
@@ -23,10 +26,17 @@ const ProductCard = () => {
             className={styles.cardImage}
           />
           <h3 className={styles.cardTitle}>{product.name}</h3>
+          <div className={styles.cardBottom}> 
           <div className={styles.cardPriceBox}>
             <span className={styles.priceLabel}>Цена:</span>
             <span className={styles.cardPrice}>{product.price}</span>
-            <button className={styles.addButton}>
+            </div>
+            <button className={styles.addButton}
+              onClick={() => {
+                addToCart(product);
+                navigate("/cart"); // переход на страницу корзины
+              }}
+            >
               <img
                 src={imageMap[product.buttonImage]}
                 alt="Добавить"
@@ -35,7 +45,7 @@ const ProductCard = () => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
