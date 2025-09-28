@@ -35,7 +35,7 @@ const Cart = () => {
           {cartItems.map((item) => (
             <div key={item.id} className={styles.cartCard}>
               <img
-                src={require(`../../assets/${item.image}`)}
+                src={`/src/apps/SneakerStoryApp/assets/${product.image}`}
                 alt={item.name}
                 className={styles.cartImage}
               />

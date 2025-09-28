@@ -38,7 +38,7 @@
   justify-content: space-between;
   margin: 45px 160px 160px 160px; /* top = 866px - 821px = 45px */
   gap: 14px; /* Расстояние между карточками */
-  flex-wrap: wrap; /* Перенос карточек на следующую строку */
+ 
 }
 
 

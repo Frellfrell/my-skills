@@ -1,5 +1,5 @@
 import React from "react";
-import News from "../News/News";
+
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Main.module.css";
 import banner from "../../assets/banner.png";

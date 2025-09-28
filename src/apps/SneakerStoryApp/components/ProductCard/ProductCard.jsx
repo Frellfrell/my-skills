@@ -1,16 +1,24 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
 import products from "../../assets/products.json";
+import snicker1 from "../../assets/snicker1.png";
+import snicker2 from "../../assets/snicker2.png";
+import Plus from "../../assets/+.png";
+import Plus1 from "../../assets/+1.png";
 
-
-
+const imageMap = {
+  "snicker1.png": snicker1,
+  "snicker2.png": snicker2,
+  "+.png": Plus,
+  "+1.png": Plus1
+};
 const ProductCard = () => {
   return (
     <div className={styles.productContainer}>
       {products.map((product) => (
         <div key={product.id} className={styles.card}>
           <img
-            src={require(`../../assets/${product.image}`)}
+            src={imageMap[product.image]}
             alt={product.name}
             className={styles.cardImage}
           />
@@ -20,7 +28,7 @@ const ProductCard = () => {
             <span className={styles.cardPrice}>{product.price}</span>
             <button className={styles.addButton}>
               <img
-                src={require(`../../assets/${product.buttonImage}`)}
+                src={imageMap[product.buttonImage]}
                 alt="Добавить"
               />
             </button>
