@@ -15,6 +15,9 @@ const imageMap = {
   "+1.png": Plus1
 };
 const ProductCard = () => {
+  const { addToCart } = useCart(); // получаем функцию добавления в корзину
+const navigate = useNavigate();
+
   return (
     <>
       {/* <div className={styles.productContainer}> */}

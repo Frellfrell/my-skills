@@ -28,12 +28,8 @@ const total = cartItems.reduce(
             ))}
           </ul>
           <div className={styles.total}>
-            Итого:{" "}
-            {cartItems.reduce(
-              (sum, item) => sum + parseInt(item.price, 10),
-              0
-            )}{" "}
-            €
+            Итого: {total} €
+            
           </div>
         </div>
 
@@ -42,7 +38,7 @@ const total = cartItems.reduce(
           {cartItems.map((item) => (
             <div key={item.id} className={styles.cartCard}>
               <img
-                src={`/src/apps/SneakerStoryApp/assets/${product.image}`}
+                src={`/src/apps/SneakerStoryApp/assets/${item.image}`}
                 alt={item.name}
                 className={styles.cartImage}
               />
@@ -50,7 +46,9 @@ const total = cartItems.reduce(
                 <span className={styles.cartName}>{item.name}</span>
                 <span className={styles.cartPrice}>{item.price}</span>
               </div>
-              <button className={styles.deleteButton}>
+              <button className={styles.deleteButton}
+              onClick={() => removeFromCart(item.id)}
+              >
                 <img src={basketIcon} alt="Удалить" />
               </button>
             </div>

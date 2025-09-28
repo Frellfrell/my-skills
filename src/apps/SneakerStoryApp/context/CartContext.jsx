@@ -1,6 +1,12 @@
 import React, { createContext, useContext, useState } from "react";
 
+
+
+
+
 const CartContext = createContext();
+
+// Хук для использования контекста
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
@@ -8,23 +14,16 @@ export const CartProvider = ({ children }) => {
 
   // добавить товар в корзину
   const addToCart = (product) => {
-    setCart((prevCart) => {
-      // проверяем, есть ли товар уже
-      const exists = prevCart.find((item) => item.id === product.id);
-      if (exists) {
-        return prevCart; // товар уже есть, не дублируем
-      }
-      return [...prevCart, product];
-    });
+    setCart((prevItems) => [...prevItems, product]);
   };
 
-  // удалить товар из корзины
+  // Удаление товара из корзины по ID
   const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    setCart((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems: cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
