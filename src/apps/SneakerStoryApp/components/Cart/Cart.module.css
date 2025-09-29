@@ -34,34 +34,35 @@
 
 /* Правая боковая панель */
 .summaryBox {
-  width: 388px;
-  height: 428px;
+  width: 288px;
+  height: 388px;
  background-color: rgba(0, 0, 0, 0.05);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 6px;
   border-radius: 8px;
   box-sizing: border-box;
 }
 .summaryBox ul {
-  list-style: none; /* убирает точки */
-  padding: 0;       /* убирает отступы слева */
-  margin: 0;        /* убирает внешние отступы */
+  list-style: none; /* уб точки */
+  padding: 0;       /* уб отступы слева */
+  margin: 0;        /* уб внешние отступы */
 }
 .summaryBox ul li {
   margin-bottom: 20px; /* расстояние между товарами */
 }
 .totalList {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   text-align: left;
  color: #000000B2;
 
 }
 .totalLabel {
-  font-size: 36px;
+  
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
@@ -97,7 +98,8 @@
 }
 
 .cartImage {
-  
+  width: 187px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -109,8 +111,7 @@
 }
 .cartInfo {
   display: flex;
-  font-size: 24px;
-  font-weight: 700;
+  
   justify-content: center;
   margin-left: 10px;
   flex: 1;
@@ -119,12 +120,13 @@
 
 .cartName {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   
   text-align: left;
 }
 .cardPriceBox {
   display: flex;
+   min-width: 100px; 
   flex-direction: column; /* ставим метку над ценой */
   align-items: flex-start; /* выравнивание слева */
   gap: 4px; /* расстояние между "Цена:" и "180 €" */
@@ -132,12 +134,12 @@
 
 .priceLabel {
   font-size: 14px;
-  color: #333;
+  color:rgba(0, 0, 0, 0.5);
 }
 
 .cartPrice {
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000;
   font-weight: 700;
 
 }

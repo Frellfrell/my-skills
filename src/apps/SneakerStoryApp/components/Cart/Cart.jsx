@@ -40,7 +40,7 @@ const total = cartItems.reduce(
                 <span className={styles.cartName}>{item.name}</span>
                 <div className={styles.cardPriceBox}>
                   <span className={styles.priceLabel}>Цена:</span>
-                  <span className={styles.cartPrice}>{item.price}</span>
+                  <span className={styles.cartPrice}>{`${item.price} `}</span>
                 </div>
               </div>
               <button className={styles.deleteButton}
