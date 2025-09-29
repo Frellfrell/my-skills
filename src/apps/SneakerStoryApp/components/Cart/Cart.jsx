@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./Cart.module.css";
 import { useCart } from "../../context/CartContext";
- 
+ import snicker1 from "../../assets/snicker1.png";
+import snicker2 from "../../assets/snicker2.png";
 import basketIcon from "../../assets/basket.png"; // PNG для кнопки удаления
+
+
+
+const imageMap = {
+  "snicker1.png": snicker1,
+  "snicker2.png": snicker2
+};
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
@@ -18,33 +26,22 @@ const total = cartItems.reduce(
       <div className={styles.titleLine}></div>
 
       <div className={styles.cartContent}>
-        {/* Левая боковая информация */}
-        <div className={styles.summaryBox}>
-          <ul>
-            {cartItems.map((item) => (
-              <li key={item.id}>
-                {item.name} - {item.price}
-              </li>
-            ))}
-          </ul>
-          <div className={styles.total}>
-            Итого: {total} €
-            
-          </div>
-        </div>
-
-        {/* Карточки корзины */}
+         {/* Карточки корзины */}
         <div className={styles.cartCards}>
           {cartItems.map((item) => (
             <div key={item.id} className={styles.cartCard}>
               <img
-                src={`/src/apps/SneakerStoryApp/assets/${item.image}`}
+                src={imageMap[item.image]}
                 alt={item.name}
                 className={styles.cartImage}
               />
+              <div className={styles.dividerVertical}></div>
               <div className={styles.cartInfo}>
                 <span className={styles.cartName}>{item.name}</span>
-                <span className={styles.cartPrice}>{item.price}</span>
+                <div className={styles.cardPriceBox}>
+                  <span className={styles.priceLabel}>Цена:</span>
+                  <span className={styles.cartPrice}>{item.price}</span>
+                </div>
               </div>
               <button className={styles.deleteButton}
               onClick={() => removeFromCart(item.id)}
@@ -54,6 +51,25 @@ const total = cartItems.reduce(
             </div>
           ))}
         </div>
+        {/* правая боковая информация */}
+        <div className={styles.summaryBox}>
+           <div className={styles.totalLabel}>Итого</div>
+          <ul className={styles.totalList}>
+            {cartItems.map((item) => (
+              <li key={item.id}>
+                {item.name} 
+              </li>
+            ))}
+          </ul>
+          <div className={styles.summaryLine}></div>
+          <div className={styles.total}>
+           Цена:
+            <br />
+            {total}€
+          </div>
+        </div>
+
+       
       </div>
     </main>
   );

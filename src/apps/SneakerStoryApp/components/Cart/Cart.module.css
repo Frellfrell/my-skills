@@ -1,93 +1,145 @@
 .cartMain {
-  padding: 0 160px;
-}
-
-.cartTitle {
-  margin-top: 160px; /* от начала макета */
-  font-size: 44px;
-  font-weight: bold;
+  padding: 40px 160px 160px 160px; /* от хедера сверху 60px, по бокам 160px */
+  font-family: Montserrat, sans-serif;
   color: #000;
 }
 
-.titleLine {
-  width: calc(100% - 320px); /* отступы слева и справа */
-  height: 1px;
-  background-color: #eaeaea;
-  margin-top: 50px;
-  margin-bottom: 40px;
+/* Заголовок "Корзина" */
+.cartTitle {
+  font-size: 36px;
+  font-weight: bold;
+ text-align: left;
+ 
 }
+
+.titleLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px auto 50px auto;
+}
+
 
 .cartContent {
   display: flex;
   gap: 30px;
 }
+/* Горизонтальная линия внутри итогового блока */
+.summaryLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+}
 
-/* Левая боковая панель */
+/* Правая боковая панель */
 .summaryBox {
   width: 388px;
-  background-color: #fafafa;
+  height: 428px;
+ background-color: rgba(0, 0, 0, 0.05);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
-
-.summaryBox h3 {
-  margin-bottom: 20px;
-}
-
 .summaryBox ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* убирает точки */
+  padding: 0;       /* убирает отступы слева */
+  margin: 0;        /* убирает внешние отступы */
 }
+.summaryBox ul li {
+  margin-bottom: 20px; /* расстояние между товарами */
+}
+.totalList {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+ color: #000000B2;
 
-.summaryBox li {
-  margin-bottom: 10px;
+}
+.totalLabel {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .total {
-  margin-top: 20px;
+  
+  font-size: 16px;
   font-weight: bold;
+  text-align: left;
 }
+
 
 /* Карточки корзины */
 .cartCards {
   display: flex;
   flex-direction: column;
   gap: 20px;
+   flex: 1;
 }
 
 .cartCard {
   display: flex;
   align-items: center;
-  width: 903px;
-  height: 134px;
-  padding: 10px;
+  /* width: 388px;  
+  height: 90px;*/
+  padding: 16px;
   border-radius: 8px;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.05);
   justify-content: space-between;
+  
 }
 
 .cartImage {
-  width: 100px;
-  height: 100px;
+  
   object-fit: cover;
   border-radius: 8px;
 }
-
+.dividerVertical {
+  width: 1px;
+  height: 98px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 20px 5px;
+}
 .cartInfo {
   display: flex;
-  flex-direction: column;
+  font-size: 24px;
+  font-weight: 700;
   justify-content: center;
-  gap: 8px;
+  margin-left: 10px;
+  flex: 1;
+  gap: 3px;
 }
 
 .cartName {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 24px;
+  
+  text-align: left;
+}
+.cardPriceBox {
+  display: flex;
+  flex-direction: column; /* ставим метку над ценой */
+  align-items: flex-start; /* выравнивание слева */
+  gap: 4px; /* расстояние между "Цена:" и "180 €" */
+}
+
+.priceLabel {
+  font-size: 14px;
+  color: #333;
 }
 
 .cartPrice {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+
 }
 
 .deleteButton {
@@ -101,6 +153,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  margin-left: 16px;
 }
 
 .deleteButton:hover {
